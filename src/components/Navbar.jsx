@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='flex space-x-3 justify-center'>
+        <div className='flex space-x-3 justify-center py-4'>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/tea'>Added tea</NavLink>
             <NavLink to='/allTea'>All Tea</NavLink>

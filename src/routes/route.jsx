@@ -24,17 +24,17 @@ const router = createBrowserRouter([
           path:'/tea',
           element:<AddedTea></AddedTea>,
         },
-        // {
-        //   path:'/allTea',
-        //   element:<Teas></Teas>,
-        //   loader:()=>fetch('http://localhost:5000/tea')
-        // },
-        // {
-        //   path:'/UpdateTea/:id',
-        //   element:<UpdateTea></UpdateTea>,
-        //   loader:({params})=>fetch(`http://localhost:5000/tea/${params.id}`)
+        {
+          path:'/allTea',
+          element:<Teas></Teas>,
+          loader:()=>fetch('http://localhost:5000/tea')
+        },
+        {
+          path:'/UpdateTea/:id',
+          element:<UpdateTea></UpdateTea>,
+          loader:({params})=>fetch(`http://localhost:5000/tea/${params.id}`)
 
-        // },
+        },
       ]
     },
   ]);

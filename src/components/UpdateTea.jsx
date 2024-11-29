@@ -1,21 +1,22 @@
 import React from 'react';
-import {NavLink, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateTea = () => {
     const teas=useLoaderData()
     const { _id,name,email,photo}=teas 
-    console.log(teas)
+    // console.log(teas)
     const updateTea=e=>{
         e.preventDefault()
         const name= e.target.name.value
         const email= e.target.email.value
         const photo= e.target.photo.value
         const user = {name,email,photo}
-        console.log(user)
+        // console.log(user)
 
 
         fetch(`http://localhost:5000/tea/${_id}`,{
-            method:"UPDATE",
+            method:"PUT",
             headers:{
                 "content-type": 'application/json'
             },
@@ -23,7 +24,14 @@ const UpdateTea = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+          if (data.acknowledged) {
+            // alert('successfully update')
+            Swal.fire({
+              title: "Success",
+              text: "Successfully update",
+              icon: "success"
+            });
+          }
         })
 
 
