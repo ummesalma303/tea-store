@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 // import { NavLink, useLoaderData } from 'react-router-dom';
 
 const AddedTea = () => {
+  const navigate = useNavigate()
   const handleTeaForm = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -17,13 +20,17 @@ const AddedTea = () => {
       },
       body: JSON.stringify(user),
     })
-      .then((res) => {
-        console.log(res);
-        return res.json(user);
-      })
+      .then((res) => res.json(user))
       .then((data) => {
-        console.log("success true", data);
-        alert("success");
+        if ( data.insertedId) {
+          Swal.fire({
+            title: "Success",
+            text: "Successfully added",
+            icon: "success"
+          });
+          navigate('/allTea')
+          e.target.reset()
+        }
       })
       .catch(err=>console.log("ERROR:",err))
   };
