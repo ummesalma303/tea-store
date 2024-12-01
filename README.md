@@ -1,8 +1,16 @@
-# React + Vite
+## Website Name: Tea Store
+### Desciption:
+This is a full-stack web application designed to manage and showcase a coffee store. The data is stored in a MongoDB Atlas database and is retrieved and displayed dynamically on the user interface through server-side processing.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Features:
+- Dynamic data retrieval and display
+- User-friendly interface
+- Secure data storage with MongoDB Atlas
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technology used:
+- React Router DOM: For client-side routing
+- Tailwind CSS: For styling
+- Daisy UI: For component styling
+- SweetAlert2 (npm package): For beautiful and responsive alerts
+- 
+### Live Preview: https://hot-tea-store.surge.sh/
