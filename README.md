@@ -1,6 +1,6 @@
 ## Website Name: Tea Store
 ### Desciption:
-This is a full-stack web application designed to manage and showcase a coffee store. The data is stored in a MongoDB Atlas database and is retrieved and displayed dynamically on the user interface through server-side processing.
+This is a full-stack web application designed to manage and showcase a tee store. The data is stored in a MongoDB Atlas database and is retrieved and displayed dynamically on the user interface through server-side processing.
 
 ### Features:
 - Dynamic data retrieval and display
